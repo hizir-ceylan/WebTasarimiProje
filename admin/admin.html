@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Ceylan Klinik</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carme&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,700;1,900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="body_container">
+        <!-- Sol Menü -->
+        <div class="left">
+            <ul>
+                <li><a href="#urunler">Hizmetler</a></li>
+                <li><a href="#birimler">Birimler</a></li>
+                <li><a href="#duyurular">Duyurular</a></li>
+                <li><a href="#rezervasyonlar">Randevular</a></li>
+            </ul>
+        </div>
+
+        <!-- Sağ İçerik -->
+        <div class="right">
+            <!-- HİZMETLER -->
+            <div class="urunler" id="urunler">
+                <div class="urunler_container">
+                    <div class="header_urunler">
+                        <h1>Hizmetler</h1>
+                        <button class="add_button">+ Yeni Hizmet Ekle</button>
+                        <div class="ekle_div">
+                            <table>
+                                <tbody>
+                                    <tr class="ekle">
+                                        <td><input type="text" name="hizmet_adi" id="hizmet_adi" placeholder="Hizmet Adı"></td>
+                                        <td><input type="text" name="kategori" id="kategori" placeholder="Kategori"></td>
+                                        <td><input type="text" name="aciklama" id="aciklama" placeholder="Açıklama"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <button class="urun_ekle_onay">Onayla</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_urunler">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hizmet Adı</th>
+                                    <th>Kategori</th>
+                                    <th>Açıklama</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diş Beyazlatma</td>
+                                    <td>Ağız ve Diş Sağlığı</td>
+                                    <td>Dişlerinizi 1 seansta beyazlatın.</td>
+                                    <td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cilt Yenileme</td>
+                                    <td>Dermatoloji</td>
+                                    <td>Cildinizi gençleştirmek için profesyonel uygulamalar.</td>
+                                    <td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BİRİMLER -->
+            <div class="urunler" id="birimler">
+                <div class="urunler_container">
+                    <div class="header_urunler">
+                        <h1>Birimler</h1>
+                        <button class="add_button">+ Yeni Birim Ekle</button>
+                        <div class="ekle_div">
+                            <table>
+                                <tbody>
+                                    <tr class="ekle">
+                                        <td><input type="text" name="birim_adi" placeholder="Birim Adı" id="birim_adi"></td>
+                                        <td><input type="text" name="birim_kategorisi" id="birim_kategorisi"
+                                                placeholder="Kategori"></td>
+                                        <td><input type="text" name="birim_aciklama" id="birim_aciklama"
+                                                placeholder="Açıklama"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <button class="urun_ekle_onay">Onayla</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_urunler">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Birim Adı</th>
+                                    <th>Kategori</th>
+                                    <th>Açıklama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Göğüs Hastalıkları</td>
+                                    <td>Sağlık&nbsp;</td>
+                                    <td>Akciğer ve solunum yolu sorunlarının tedavi edildiği birim.&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Ortopedi</td>
+                                    <td>Sağlık</td>
+                                    <td>Eklem ve kas sorunlarının tedavi edildiği birim.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DUYURULAR -->
+            <div class="urunler" id="duyurular">
+                <div class="urunler_container">
+                    <div class="header_urunler">
+                        <h1>Duyurular</h1>
+                        <button class="add_button">+ Yeni Duyuru Ekle</button>
+                        <div class="ekle_div">
+                            <table>
+                                <tbody>
+                                    <tr class="ekle">
+                                        <td><input type="text" name="duyuru_basligi" id="duyuru_basligi"
+                                                placeholder="Duyuru Başlığı"></td>
+                                        <td><input type="text" name="duyuru_tarihi" id="duyuru_tarihi"
+                                                placeholder="Tarih"></td>
+                                        <td><input type="text" name="duyuru_aciklama" id="duyuru_aciklama"
+                                                placeholder="Açıklama"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <button class="urun_ekle_onay">Onayla</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_urunler">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Duyuru Başlığı</th>
+                                    <th>Tarih</th>
+                                    <th>Açıklama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>"Yılbaşı Tatil Duyurusu"</td>
+                                    <td>01.01.2025</td>
+                                    <td>Klinik, yılbaşı günü hizmet vermeyecektir.</td>
+                                </tr>
+                                <tr>
+                                    <td>"Yeni Cihaz Tanıtımı"</td>
+                                    <td>15.01.2025</td>
+                                    <td>Lazer teknolojisiyle ilgili yeni cihazımız hizmetinizde!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RANDEVULAR -->
+            <div class="urunler" id="rezervasyonlar">
+                <div class="urunler_container">
+                    <div class="header_urunler">
+                        <h1>Randevular</h1>
+                        <button class="add_button">+ Yeni Randevu Ekle</button>
+                        <div class="ekle_div">
+                            <table>
+                                <tbody>
+                                    <tr class="ekle">
+                                        <td><input type="text" name="randevu_adi" id="randevu_adi" placeholder="Hasta Adı Soyadı"></td>
+                                        <td><input type="text" name="randevu_tarihi" id="randevu_tarihi" placeholder="Tarih"></td>
+                                        <td><input type="text" name="randevu_saati" id="randevu_saati" placeholder="Saat"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <button class="urun_ekle_onay">Onayla</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_urunler">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hasta Adı Soyadı</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ahmet Yılmaz</td>
+                                    <td>08.01.2025</td>
+                                    <td>14:30</td>
+                                    <td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Elif Kaya</td>
+                                    <td>09.01.2025</td>
+                                    <td>10:00</td>
+                                    <td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
