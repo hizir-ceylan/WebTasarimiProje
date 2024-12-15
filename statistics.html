@@ -29,6 +29,9 @@
 
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet">
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -152,6 +155,19 @@
             </div>
         </div>
     </div>
+	<div class="container py-5">
+    <h2 class="display-4 text-light center mb-5 text-center">Grafiklerle İstatistikler</h2>
+    <div class="row">
+        <!-- Bar Chart -->
+        <div class="col-lg-6 mb-4">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <canvas id="barChart2"></canvas>
+        </div>
+    </div>
+</div>
+
 </div>
 
         
@@ -210,6 +226,113 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+	
+<script>
+    // İlk Bar Chart (Hasta Sayıları)
+    const barChartCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barChartCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Kardiyoloji', 'Nöroloji', 'Göğüs Hastalıkları', 'Ortopedi', 'Diş'],
+            datasets: [{
+                label: 'Hasta Sayıları',
+                data: [120, 37, 63, 39, 84],
+                backgroundColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']
+            }]
+        },
+        options: {
+            responsive: true,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            plugins: {
+                legend: { 
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        color: 'white'  // Legend yazı rengini beyaz yap
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        color: 'black'  // Grid rengini siyah yap
+                    },
+                    ticks: {
+                        color: 'white'  // X ekseni etiket rengini beyaz yap
+                    }
+                },
+                y: {
+                    grid: {
+                        color: 'black'  // Grid rengini siyah yap
+                    },
+                    ticks: {
+                        color: 'white'  // Y ekseni etiket rengini beyaz yap
+                    }
+                }
+            }
+        }
+    });
+
+    // İkinci Bar Chart (Başarı Oranları)
+    const barChart2Ctx = document.getElementById('barChart2').getContext('2d');
+    new Chart(barChart2Ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Kardiyoloji', 'Nöroloji', 'Göğüs Hastalıkları','Ortopedi', 'Diş'],
+            datasets: [{
+                label: 'Başarı Oranı (%)',
+                data: [98, 87, 90, 98, 87],
+                backgroundColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']
+            }]
+        },
+        options: {
+            responsive: true,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            plugins: {
+                legend: { 
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        color: 'white'  // Legend yazı rengini beyaz yap
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        color: 'black'  // Grid rengini siyah yap
+                    },
+                    ticks: {
+                        color: 'white'  // X ekseni etiket rengini beyaz yap
+                    }
+                },
+                y: {
+                    grid: {
+                        color: 'black'  // Grid rengini siyah yap
+                    },
+                    ticks: {
+                        color: 'white',
+                    }
+                }
+            }
+        }
+    });
+</script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
