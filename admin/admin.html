@@ -28,11 +28,11 @@
         <!-- Sağ İçerik -->
         <div class="right">
             <!-- DOKTORLAR -->
-            <div class="doktorlar" id="doktorlar">
+            <div class="urunler" id="doktorlar">
                 <div class="doktorlar_container">
-                    <div class="header_doktorlar">
+                    <div class="header_urunler">
                         <h1>Doktorlar</h1>
-                        <button class="add_button">+ Yeni Doktor Ekle</button>
+                        <button class="add_button">Yeni Doktor Ekle</button>
                         <div class="ekle_div">
                             <table>
                                 <tbody>
@@ -44,7 +44,7 @@
                                 </tbody>
                             </table>
                             <div>
-                                <button class="doktor_ekle_onay">Onayla</button>
+                                <button class="ekle_onay">Onayla</button>
                             </div>
                         </div>
                     </div>
@@ -82,13 +82,13 @@
                     </div>
                 </div>
             </div>
-
+			<div class="section-space"></div>
             <!-- BİRİMLER -->
             <div class="urunler" id="birimler">
-                <div class="urunler_container">
+                <div class="doktorlar_container">
                     <div class="header_urunler">
                         <h1>Birimler</h1>
-                        <button class="add_button">+ Yeni Birim Ekle</button>
+                        <button class="add_button">Yeni Birim Ekle</button>
                         <div class="ekle_div">
                             <table>
                                 <tbody>
@@ -102,42 +102,51 @@
                                 </tbody>
                             </table>
                             <div>
-                                <button class="urun_ekle_onay">Onayla</button>
+                                <button class="ekle_onay">Onayla</button>
                             </div>
                         </div>
                     </div>
-                    <div class="list_urunler">
+                    <div class="list_doktorlar">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Birim Adı</th>
                                     <th>Kategori</th>
                                     <th>Açıklama</th>
+									<th>İşlemler</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Göğüs Hastalıkları</td>
-                                    <td>Sağlık&nbsp;</td>
-                                    <td>Akciğer ve solunum yolu sorunlarının tedavi edildiği birim.&nbsp;</td>
+                                    <td>Sağlık</td>
+                                    <td>Akciğer ve solunum yolu sorunlarının tedavi edildiği birim.;</td>
+									<td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ortopedi</td>
                                     <td>Sağlık</td>
                                     <td>Eklem ve kas sorunlarının tedavi edildiği birim.</td>
+									<td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
+			<div class="section-space"></div>
             <!-- DUYURULAR -->
             <div class="urunler" id="duyurular">
-                <div class="urunler_container">
+                <div class="doktorlar_container">
                     <div class="header_urunler">
                         <h1>Duyurular</h1>
-                        <button class="add_button">+ Yeni Duyuru Ekle</button>
+                        <button class="add_button">Yeni Duyuru Ekle</button>
                         <div class="ekle_div">
                             <table>
                                 <tbody>
@@ -152,7 +161,7 @@
                                 </tbody>
                             </table>
                             <div>
-                                <button class="urun_ekle_onay">Onayla</button>
+                                <button class="ekle_onay">Onayla</button>
                             </div>
                         </div>
                     </div>
@@ -163,6 +172,7 @@
                                     <th>Duyuru Başlığı</th>
                                     <th>Tarih</th>
                                     <th>Açıklama</th>
+									<th>İşlemler</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -170,24 +180,32 @@
                                     <td>"Yılbaşı Tatil Duyurusu"</td>
                                     <td>01.08.2024</td>
                                     <td>Klinik, yılbaşı günü hizmet vermeyecektir.</td>
+									<td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>"Yeni Cihaz Tanıtımı"</td>
                                     <td>15.07.2024</td>
                                     <td>Lazer teknolojisiyle ilgili yeni cihazımız hizmetinizde!</td>
+									<td>
+                                        <button class="edit_button">Düzenle</button>
+                                        <button class="delete_button">Sil</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
+			<div class="section-space"></div>
             <!-- RANDEVULAR -->
             <div class="urunler" id="rezervasyonlar">
-                <div class="urunler_container">
+                <div class="doktorlar_container">
                     <div class="header_urunler">
                         <h1>Randevular</h1>
-                        <button class="add_button">+ Yeni Randevu Ekle</button>
+                        <button class="add_button">Yeni Randevu Ekle</button>
                         <div class="ekle_div">
                             <table>
                                 <tbody>
@@ -199,7 +217,7 @@
                                 </tbody>
                             </table>
                             <div>
-                                <button class="urun_ekle_onay">Onayla</button>
+                                <button class="ekle_onay">Onayla</button>
                             </div>
                         </div>
                     </div>
